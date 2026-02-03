@@ -1,167 +1,150 @@
-/* ============================
-   Base styles
-============================ */
+/* page font and colors */
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: #e6e6e6; /* light neutral background for contrast */
-  color: #1f1f1f; /* dark text for readability */
+  background-color: #eeb9dc;
+  color: #111;
   margin: 0;
   padding: 0;
 }
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
+/* heading decorative font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
-  color: #111;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
 }
-
-/* Container */
+/* center content and limit width */
 .container {
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 1rem;
 }
+/* skip link */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: #000;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  z-index: 1000;
+}
+ 
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+/* space below the header */
+.site-header {
+  margin-bottom: 2rem;
+}
 
-/* ============================
-   Images
-============================ */
+/* images responsive  */
 img {
   width: 100%;
   height: auto;
+  display: block;
+  margin-top: 1rem;
 }
-
-/* ============================
-   Navigation
-============================ */
+.banner {
+  max-height: 550px;
+  object-fit: cover;
+}
+/* navigation layout */
 .main-nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  background-color: #333; /* dark background for contrast */
+  justify-content: center;
+  gap: 2rem;
 }
 
 .main-nav ul li {
-  flex: 1;
+  flex: none;
   text-align: center;
 }
 
 .main-nav ul li a {
   display: block;
-  color: #f9f9f9; /* white text for readability */
-  text-decoration: none;
+  color: #111;
+  text-decoration: underline;
   font-size: 1.25rem;
-  padding: 1rem;
+  padding: 0.5rem 0.75rem;
 }
-
+/
 .main-nav ul li a:hover,
 .main-nav ul li a:focus {
-  background-color: #555; /* highlight hover/focus */
-  outline: none;
-}
 
-/* ============================
-   Skip link
-============================ */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: #222;
+  background-color: #111;
   color: #fff;
-  padding: 0.5rem 1rem;
-  z-index: 1000;
-  text-decoration: none;
+  outline: 3px solid #005fcc;
+  outline-offset: 2px;
 }
 
-.skip-link:focus {
-  top: 0;
-}
-
-/* ============================
-   Forms
-============================ */
-form label {
-  font-weight: 500;
-  display: block;
-  margin-bottom: 0.25rem;
-}
-
+/* form inputs and textarea */
 form input,
 form textarea {
   display: block;
   width: 100%;
   margin-bottom: 1rem;
-  padding: 0.75rem 1rem;
-  border: 2px solid #555;
+  padding: .0.75rem 1rem;
+  border: 2px solid #111;
+  background-color: #fff;
+  color: #111;
   font-size: 1rem;
-  border-radius: 4px;
 }
 
-form input:focus,
-form textarea:focus {
-  border-color: #0047ab;
-  outline: 3px solid #0047ab;
-  outline-offset: 2px;
+.main-content {
+  margin-bottom: 2rem;
 }
 
+section {
+  margin-top: 2rem;
+}
+
+
+ul {
+  padding-left: 1.25rem;
+}
+
+address {
+  font-style: normal;
+  margin-top: 0.5rem;
+}
+/* label */
+label {
+  display: block;
+  margin: 1rem 0 0.25rem;
+  font-weight: 500;
+}
+/* ftextarea height*/
 form textarea {
   min-height: 150px;
+  max-height: 150px;
+  height: 150px;
   resize: vertical;
 }
-
-/* ============================
-   Buttons
-============================ */
+/* Style of the submit button  */
 form button {
-  background-color: #444;
+  background: none;
+  border: 2px solid black;
+  padding: 1rem;
+  text-transform: uppercase;
+  background-color: #111;
   color: #fff;
   border: none;
-  border-radius: 4px;
-  padding: 0.75rem 1.5rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
 }
 
-form button:hover,
-form button:focus {
-  background-color: #222;
-  outline: none;
-}
-
-/* ============================
-   Owner / Sections
-============================ */
-.owner ul {
-  list-style: none;
-  padding: 0;
-}
-
-.owner ul li {
-  margin-bottom: 0.5rem;
-}
-
-/* ============================
-   Footer
-============================ */
+/* Footer */
 .site-footer {
   padding: 2rem 0;
+  background: #1a1a1a;
+  border: 1px;
+  color: white;
   text-align: center;
-  color: #222;
-  background-color: #d9d9d9; /* slightly darker for contrast */
-}
-
-/* ============================
-   General Focus Styles
-============================ */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus {
-  outline: 2px solid #0047ab;
-  outline-offset: 2px;
 }

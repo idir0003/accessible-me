@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Accessible Me</title>
+  <meta name="description" content="Jam Box Studios recording studio website">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,82 +15,102 @@
 </head>
 
 <body>
-  <!-- Skip link lets keyboard users jump straight to main content -->
+
+  <!-- Skip Link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <header class="site-header" role="banner">
-     <h1>Jambox Studios</h1>
-     <nav class="main-nav" role="navigation" aria-label="Mian navigation">
-      <!-- navigation links -->
-      <ul>
-         <li><a href="#">Home</a></li>
+
+  <div class="container">
+
+    <header class="site-header">
+      <h1>Jambox Studios</h1>
+      <!-- navigation link -->
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="#">Reservation</a></li>
           <li><a href="#">Studio</a></li>
-      </ul>
-     </nav>
-     <!-- banner image for the homepage -->
-     <img src="https://picsum.photos/1200/900" class="banner"  alt="Recording studio with musical instruments"> 
-  </header>
+        </ul>
+      </nav>
+      <figure>
+        <!-- banner image for the homepage -->
+        <img src="https://picsum.photos/1200/900"
+             class="banner"
+             alt="Recording studio with musical instruments">
+      </figure>
 
-  <main id="main-content" role="main">
-    <section>
-      <h2>Welcome to Jam Box</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nulla eius deleniti atque voluptatem nostrum odio, iste possimus earum, distinctio iure quo. Velit officiis quia cumque. Eos aliquam mollitia animi?</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit labore deleniti inventore, vitae facilis illum earum culpa quaerat sit iste necessitatibus, non possimus veniam quisquam enim accusantium. Dignissimos, sed accusantium!</p>
+    </header>
 
+  </div>
+
+ <main id="main-content" class="container">
+
+    <section aria-labelledby="welcome-heading">
+      <h2 id="welcome-heading">Welcome to Jam Box</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aliquam, error magnam pariatur ea voluptates iusto debitis, dolor esse accusamus dolorem atque veritatis aliquid nobis totam tenetur porro officiis voluptatum.</p>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet asperiores vel voluptatibus et, distinctio porro tempore hic numquam ea repellendus. Accusamus necessitatibus saepe consectetur eaque rerum amet perspiciatis pariatur eveniet.</p>
     </section>
-<section class="owner" itemscope itemtype="https://schema.org/Person">
-  <h2>Meet the owner</h2>
-  <!-- inforamtion about the owner -->
-  <ul>
-    <li><strong>Name:</strong> <span itemprop="name">John Doe</span></li>
-        <li><strong>Title:</strong> <span itemprop="jobTitle">CEO</span></li>
-        <li><strong>Email:</strong> <a href="mailto:johnjoe@jambox.ca" itemprop="email">johnjoe@jambox.ca</a></li>
-        <li><strong>Phone:</strong> <span itemprop="telephone">613-000-0000</span></li>
-  </ul>
-  <h3>Address</h3>
-  <!-- john adress  -->
-   <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+
+    <!-- information about the owner -->
+    <section class="owner" itemscope itemtype="https://schema.org/Person" aria-labelledby="owner-heading">
+      <h2 id="owner-heading">Meet the Owner</h2>
+      <ul>
+        <li><strong>Name:</strong>
+          <span itemprop="name">John Doe</span>
+        </li>
+        <li><strong>Title:</strong>
+          <span itemprop="jobTitle">CEO</span>
+        </li>
+        <li><strong>Email:</strong>
+          <a href="mailto:johnjoe@jambox.ca"
+             itemprop="email">johnjoe@jambox.ca</a>
+        </li>
+        <li><strong>Phone:</strong>
+          <span itemprop="telephone">613-000-0000</span>
+        </li>
+      </ul>
+
+      <h3>Address</h3>
+      <!-- john adress -->
+      <address itemprop="address"  itemscope itemtype="https://schema.org/PostalAddress">
         <span itemprop="streetAddress">123 Guitar Road</span><br>
         <span itemprop="addressLocality">Musicville</span>,
         <span itemprop="addressCountry">Danceistan</span><br>
         <span itemprop="postalCode">B3T 0L0</span>
       </address>
-</section>
-<section class="contact-section" >
-  <h2>Contact Us</h2>
-  <!-- form for sending message -->
-   <form action="thanks.html" aria-label="Contact form">
+    </section>
+
+    <!-- form for sending message -->
+    <section class="contact-section" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Us</h2>
+      <form action="thanks.html">
         <div>
           <label for="fullname">Full Name</label>
-          <input type="text" id="fullname" name="fullname" required>
+          <input type="text"  id="fullname" name="fullname" autocomplete="name" required>
         </div>
-
         <div>
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" name="email" autocomplete="email" required>
         </div>
+
         <div>
           <label for="subject">Subject</label>
           <input type="text" id="subject" name="subject">
         </div>
-
         <div>
           <label for="message">Your Message</label>
-          <textarea id="message" name="message" required></textarea>
+          <textarea id="message" name="message" rows="5" required></textarea>
         </div>
-
         <button type="submit">Send</button>
       </form>
-</section>
+    </section>
   </main>
-  <footer class="site-footer" role="contentinfo">
-    <!-- copyright information -->
+
+<footer class="site-footer">
+  <div class="container">
     <p>&copy; 2021 Jam Box Studios</p>
-    
-  </footer>
+  </div>
+</footer>
 
-      
-</body> 
-
+</body>
 </html>
