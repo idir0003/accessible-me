@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accessible Me</title>
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Stick+No+Bills:wght@300&display=swap" rel="stylesheet">
@@ -13,9 +13,12 @@
 </head>
 
 <body>
+  <!-- Skip link lets keyboard users jump straight to main content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <header class="site-header" role="banner">
      <h1>Jambox Studios</h1>
      <nav class="main-nav" role="navigation" aria-label="Mian navigation">
+      <!-- navigation links -->
       <ul>
          <li><a href="#">Home</a></li>
           <li><a href="#">Products</a></li>
@@ -23,6 +26,7 @@
           <li><a href="#">Studio</a></li>
       </ul>
      </nav>
+     <!-- banner image for the homepage -->
      <img src="https://picsum.photos/1200/900" class="banner"  alt="Recording studio with musical instruments"> 
   </header>
 
@@ -35,6 +39,7 @@
     </section>
 <section class="owner" itemscope itemtype="https://schema.org/Person">
   <h2>Meet the owner</h2>
+  <!-- inforamtion about the owner -->
   <ul>
     <li><strong>Name:</strong> <span itemprop="name">John Doe</span></li>
         <li><strong>Title:</strong> <span itemprop="jobTitle">CEO</span></li>
@@ -42,6 +47,7 @@
         <li><strong>Phone:</strong> <span itemprop="telephone">613-000-0000</span></li>
   </ul>
   <h3>Address</h3>
+  <!-- john adress  -->
    <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
         <span itemprop="streetAddress">123 Guitar Road</span><br>
         <span itemprop="addressLocality">Musicville</span>,
@@ -51,6 +57,7 @@
 </section>
 <section class="contact-section" >
   <h2>Contact Us</h2>
+  <!-- form for sending message -->
    <form action="thanks.html" aria-label="Contact form">
         <div>
           <label for="fullname">Full Name</label>
@@ -76,6 +83,7 @@
 </section>
   </main>
   <footer class="site-footer" role="contentinfo">
+    <!-- copyright information -->
     <p>&copy; 2021 Jam Box Studios</p>
     
   </footer>
